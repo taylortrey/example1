@@ -1,0 +1,365 @@
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	background: transparent;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+strong {
+	font-weight: bold;
+}
+/* END Reset */
+
+
+html,
+body {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 2em;
+	margin-bottom: 1em;
+}
+
+#header {
+	border-bottom: 1px solid #ddd;
+	padding: 2em 0;
+}
+
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 3em;
+}
+
+nav-dir {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.navigation li {
+	padding: 0 1em;
+	cursor: pointer;
+}
+.navigation li.active a {
+	color: #333;
+}
+footer .navigation li.active a {
+	color: #fff;
+}
+.navigation li a {
+	text-decoration: none;
+	position: relative;
+	color: #7e7e7e;
+	font-size: 1.1em;
+}
+footer .navigation li a {
+	color: #afaeae;
+}
+.navigation li a::after {
+	content: '';
+	width: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	background: #29c5e6;
+	transition: all .4s;
+	transition: all .4s;
+	transition: all .4s;
+	transition: all .4s;
+}
+.navigation li.active a::after {
+	width: 100%;
+}
+
+.navigation li:hover a::after {
+	width: 100%;
+}
+
+.navigation li a:hover {
+	cursor: pointer;
+}
+
+
+ui-view {
+	padding: 4em;
+	display: block;
+	min-height: 800px;
+	position: relative;
+}
+
+.dz-preview {
+	width: 33%;
+	float: left;
+	position: relative;
+	padding: 0 5px;
+	margin-bottom: 1em;
+}
+.dz-preview .dz-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.dz-preview .dz-remove {
+	width: 28px;
+	height: 28px;
+	background: url(../images/close.png) no-repeat, #fff;
+	background-position: center;
+	border-radius: 50%;
+	border: 1px solid #333;
+	display: block;
+	position: absolute;
+	right: -2px;
+	top: -8px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .25s;
+	-o-transition: all .25s;
+	-ms-transition: all .25s;
+	-moz-transition: all .25s;
+	-webkit-transition: all .25s;
+}
+.dz-preview .dz-remove:hover {
+	opacity: 1 !important;
+	cursor: pointer;
+}
+.dz-preview:hover .dz-remove {
+	visibility: visible;
+	opacity: .7;
+}
+
+.dz-preview .dz-details {
+	text-align: center;
+}
+.dz-preview .dz-size {
+	font-size: .85em;
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
+.dz-preview .dz-size strong {
+	font-weight: 400;
+}
+.dz-preview .dz-filename {
+	font-weight: 600;
+}
+.dz-preview .dz-filename span {
+	word-break: break-all;
+	min-height: 38px;
+	display: block;
+}
+
+.dz-preview .dz-progress,
+.dz-preview .dz-error-message,
+.dz-preview .dz-success-mark,
+.dz-preview .dz-error-mark {
+	display: none;
+}
+
+.previews-list .dz-preview {
+	margin-bottom: 2em;
+}
+.previews-list .dz-preview .dz-filename {
+	margin-top: .5em;
+	min-height: 41px;
+}
+.dz-preview .user-name {
+	font-weight: 600;
+}
+.dz-preview .image-url {
+	color: #777;
+	font-size: .9em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.button-block {
+	text-align: right;
+	margin-top: 1em;
+}
+
+.button {
+	min-width: 150px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 3px;
+	background: #999;
+	color: #fff;
+	border: 1px solid #999;
+	box-shadow: none;
+	text-transform: uppercase;
+	padding: 1em 0;
+	transition: all .25s;
+	-o-transition: all .25s;
+	-ms-transition: all .25s;
+	-moz-transition: all .25s;
+	-webkit-transition: all .25s;
+}
+.button:hover {
+	cursor: pointer;
+	color: #999;
+	border-color: #999;
+	background: none;
+}
+
+.button-save {
+	background: #29c5e6;
+	border: 1px solid #29c5e6;
+}
+.button-save.disable {
+	background: #999;
+	border: 1px solid #999;
+}
+.button-save.disable:hover {
+	background: #999;
+	color: #fff;
+	border: 1px solid #999;
+}
+.button-save:hover {
+	color: #29c5e6;
+	border-color: #29c5e6;
+	background: none;
+}
+
+table .button {
+	min-width: 0;
+	text-transform: none;
+	font-size: 1em;
+	padding: .3em .3em;
+	margin-bottom: .1em;
+}
+
+.previews-list {
+	list-style: none;
+}
+
+.signin-form {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 30%;
+	border: 1px solid #ddd;
+	padding: 1.5em;
+	transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+.signin-form h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.signin-form input:focus {
+	outline-color: #29c5e6 !important;
+	box-shadow: none;
+}
+.signin-form button {
+	width: 100%;
+	background: #29c5e6;
+	color: #fff;
+	border: 1px solid #29c5e6;
+	box-shadow: none;
+	text-transform: uppercase;
+	padding: 1em 0;
+	transition: all .25s;
+	-o-transition: all .25s;
+	-ms-transition: all .25s;
+	-moz-transition: all .25s;
+	-webkit-transition: all .25s;
+}
+.signin-form button:hover {
+	color: #29c5e6;
+	border-color: #29c5e6;
+	background: none;
+}
+
+.image-url {
+	max-height: 40px;
+	overflow: hidden;
+}
+
+
+
+
+table {
+	width:100%;
+	border-collapse: collapse;
+}
+
+table th,
+table td {
+	border: 1px solid #ddd;
+	padding: .8em;
+}
+
+table thead th {
+	font-weight: 600;
+}
+table tbody td {
+	border-bottom: 1px solid #ddd;
+}
+
+
+.block-preview {
+	display: inline-block;
+	border: 1px solid #ddd;
+	padding: 1.5em;
+	margin: 3em auto 1em auto;
+	text-align: center;
+	left: 50%;
+	position: relative;
+	transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+.block-preview img {
+	display: block;
+	margin-bottom: 1em;
+}
+.block-preview .button {
+	clear: both;
+}
+
+.error {
+	color: red;
+	text-align: center;
+	margin-top: .5em;
+}
+
+.info {
+	color: #a7a7a7;
+	font-size: .8em;
+	margin-top: 2em;
+}
+
+
+footer {
+	padding: 2em 0;
+	background: #333;
+}

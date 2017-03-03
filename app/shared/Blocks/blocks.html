@@ -1,0 +1,26 @@
+<!-- Blocks View -->
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<h2>Blocks View </h2>
+			<div ng-hide="imagesData.length > 0" class="no-data"><h5>No uploaded images</h5></div>
+			<ul class="previews-list">
+				<li ng-repeat="image in imagesData" class="dz-preview col-lg-4 col-md-4 col-sm-4">
+					<span class="dz-remove" ng-click="removeImage(image)"></span>
+					<div class="dz-image">
+						<img ng-src="{{image.imageUrl}}" alt="">
+					</div>
+					<div class="dz-details">
+						<p class="dz-filename">{{image.imageName}}</p>
+						<p class="user-name">{{image.uploadedUserName}}</p>
+						<p class="dz-size">{{image.fileSize}}</p>
+						<p class="image-url">{{image.checksum}}</p>
+					</div>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+

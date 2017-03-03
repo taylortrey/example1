@@ -1,0 +1,38 @@
+<!-- Table View-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+		    <h2>Table View</h2>
+		    <div ng-hide="imagesData.length > 0" class="no-data"><h5>No uploaded images</h5></div>
+		    <table ng-show="imagesData.length > 0">
+		    	<thead>
+		            <tr>
+		                <th ng-repeat="(id, header) in tableHeaderFileds"> 
+		                    <span>
+		                        {{header}}
+		                    </span>
+		                </th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		        	<tr ng-repeat="(id, row) in imagesData"> 
+		        		<td ng-repeat="field in tableFileds" ng-class="field">
+		        			{{row[field]}}
+		        		</td>
+		        		<td>
+		        			<span ng-click="viewImage(row)" class="button">View</span>
+		        			<span ng-click="removeImage(row)" class="button">Delete</span>
+		        		</td>
+		        	</tr>
+		        </tbody>
+		    </table>
+
+			<div class="block-preview" ng-if="showBlockPreview">
+				<img ng-src="{{currentImage.url}}" alt="current image" />
+				<span ng-click="hideBlockPreview()" class="button">Close</span>
+			</div>
+		</div>
+	</div>
+</div>
+

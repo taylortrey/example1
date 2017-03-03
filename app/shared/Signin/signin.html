@@ -1,0 +1,30 @@
+<!-- Sign in View-->
+
+<div class="container">
+	<div class="row">
+		<form class="signin-form">
+			<h2>Sign in with your Account</h2>
+			<div class="form-group">
+				<label for="inputEmail">Email</label>
+				<input type="email" class="form-control" id="inputEmail" ng-model="user.email" placeholder="user1@gmail.co" required>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword">Password</label>
+				<input type="password" class="form-control" id="inputPassword" ng-model="user.password" placeholder="pas1" required>
+			</div>
+			<button type="submit" class="btn btn-default" ng-click="checkUser(user)">Submit</button>
+			<p class="error" ng-if="showError">Wrong credentials</p>
+			<p class="info">For passing authorization use:
+				<br/> Email: user1@gmail.co
+				<br/> Password: pas1
+			</p>
+			<p class="info">
+				Email: user2@gmail.co
+				<br/> Password: pas2
+				<br/> etc...
+			</p>
+		</form>
+		
+	</div>
+</div>
+

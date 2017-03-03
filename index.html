@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="conference rooms door monitors">
+
+        <title>APP - by Gleb Sheremet</title>
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/dropzone.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="assets/css/main.css" rel="stylesheet">
+    </head>
+
+    <body ng-app="myApp">
+        <div id="header" ng-class="{'ng-hide' : (currentActive == 'Signin')}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <img class="logo" src="assets/images/logo.png" alt="logo site"/>
+                        <nav-dir></nav-dir>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ui-view></ui-view>
+
+        <footer ng-class="{'ng-hide' : (currentActive == 'Signin')}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <img class="logo" src="assets/images/logo-footer.png" alt="logo site"/>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Angular References-->
+        <script src="Angular/angular.min.js"></script>
+        <script src="Angular/angular-route.min.js"></script>
+        <script src="Angular/angular-ui-router.min.js"></script>
+
+        <!-- my app and dependent modules -->
+        <script src="app/app.module.js"></script>
+        <script src="app/app.routing.js"></script>
+
+        <script src="app/shared/template.js"></script>
+
+        <!-- Services -->
+        <script src="app/components/Services/readusers.js"></script>
+        <script src="app/components/Services/mainservice.js"></script>
+
+        <!-- Controllers -->
+        <script src="app/shared/Signin/siginController.js"></script>
+        <script src="app/shared/Blocks/blocksController.js"></script>
+        <script src="app/shared/Table/tableController.js"></script>
+        <script src="app/shared/Upload/uploadController.js"></script>
+
+        <!-- Directives -->
+        <script src="app/components/Directives/nav.js"></script>
+        <script src="app/components/Directives/ng-dropzone.js"></script>
+
+        <script src="assets/lib/dropzone.js"></script>
+        <script src="assets/lib/dropzone-autoDiscover.js"></script>
+
+    </body>
+
+</html>
+
+
